@@ -1,0 +1,114 @@
+<%- include ('../partials/header') %>
+
+
+<div class="container py-5">
+  <div class="row">
+    <div class="col-12 col-md-2">
+      <div class="container">
+        <div><a style="text-decoration: none;" href="./dining"> YORK ROOM </a></div>
+        <div><a style="text-decoration: none;" href="./bel-cafe"> BEL CAFE </a></div>
+        <div><a style="text-decoration: none;" href="./deposit"> DEPOSIT </a></div>
+        <i class="fas fa-utensils fa-5x py-4"></i>
+      </div>
+    </div>
+    <div class="col-12 col-md-10">
+      <div class="container-fluid" id="health">
+        <h2>Private Dining</h2> <hr/>
+          <div class="row">
+            <div class="col-12 col-md-6">
+              <form>
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">Registered address</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                  <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label">Reservation Number</label>
+                  <input type="text" class="form-control" id="exampleInputPassword1">
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label">Full Name</label>
+                  <input type="text" class="form-control" id="exampleInputPassword1">
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label">Phone Number</label>
+                  <input type="number" class="form-control" id="exampleInputPassword1">
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label">Deposit Amount</label>
+                  <input type="numer" class="form-control" id="exampleInputPassword1">
+                </div>
+
+                <div class="mb-3 form-check">
+                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                  <label class="form-check-label" for="exampleCheck1">My Deposit will be applied to bill</label>
+                </div>
+                <h4>Total: $0.0</h4>
+                <br/>
+              </form>
+
+              <h4>Make Payment</h4>
+              <div class="card">
+                <div class="card-header">
+                  <ul class="nav bg-light nav-pills rounded nav-fill mb-3">
+                      <li class="nav-item"> <a data-toggle="" href="#" class="nav-link active "> <i class="fas fa-credit-card mr-2"></i> Credit Card </a> </li>
+                      <li class="nav-item"> <a data-toggle="" href="#" class="nav-link "> <i class="fab fa-paypal mr-2"></i> Paypal </a> </li>
+                      <li class="nav-item"> <a data-toggle="" href="#" class="nav-link "> <i class="fas fa-mobile-alt mr-2"></i> Net Banking </a> </li>
+                  </ul>
+                </div>
+
+                <div id="paypal" class="p-3">
+                  <h6 class="pb-2">Select your paypal account type</h6>
+                  <div class="form-group "> 
+                    <label class="radio-inline"> 
+                      <input type="radio" name="optradio" checked> Domestic 
+                    </label> 
+                    <label class="radio-inline"> 
+                      <input type="radio" name="optradio" class="ml-5">International 
+                    </label>
+                  </div>
+                  <p> 
+                    <button type="button" class="btn btn-primary "><i class="fab fa-paypal mr-2"></i> Log into my Paypal</button> 
+                  </p>
+                  <p class="text-muted"> Note: After clicking on the button, you will be directed to a secure gateway for payment. After completing the payment process, you will be redirected back to the website to view details of your order. </p>
+                </div> 
+                
+                <div id="net-banking" class="p-3">
+                  <div class="form-group "> <label for="Select Your Bank">
+                    <h6>Select your Bank</h6>
+                    </label> <select class="form-control" id="ccmonth">
+                      <option value="" selected disabled>--Please select your Bank--</option>
+                      <option>Bank 1</option>
+                      <option>Bank 2</option>
+                      <option>Bank 3</option>
+                      <option>Bank 4</option>
+                      <option>Bank 5</option>
+                      <option>Bank 6</option>
+                      <option>Bank 7</option>
+                      <option>Bank 8</option>
+                      <option>Bank 9</option>
+                      <option>Bank 10</option>
+                    </select> </div>
+                  <div class="form-group">
+                    <p> <button type="button" class="btn btn-primary "><i class="fas fa-mobile-alt mr-2"></i> Proceed Payment</button> </p>
+                  </div>
+                  <p class="text-muted">Note: After clicking on the button, you will be directed to a secure gateway for payment. After completing the payment process, you will be redirected back to the website to view details of your order. </p>
+                </div> <!-- End -->
+              </div>
+              
+
+            </div>
+            <div class="col-12 col-md-6">
+              <img src="../images/banners/deposit.jpg" class="mt-4" alt="kitchen image" width="100%">
+              <img src="../images/banners/deposit2.jpg" class="mt-4" alt="kitchen image" width="100%">
+              <img src="../images/banners/deposit4.jpg" class="mt-4" alt="kitchen image" width="100%">
+              <img src="../images/banners/bell3.jpg" class="mt-4" alt="kitchen image" width="100%">
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<%- include ('../partials/footer') %>

@@ -1,0 +1,97 @@
+<%- include ('../partials/header') %>
+
+
+
+<div class="container py-5">
+  <div class="row">
+    <div class="col-12 col-md-2 d-none d-md-block">
+      <div class="container">
+        <i class="fas fa-utensils fa-5x py-4"></i>
+      </div>
+    </div>
+    <div class="col-12 col-md-10">
+      <div class="container-fluid" id="health">
+        <h2>Add/Remove Special Items</h2> <hr/>
+          <div class="row">
+            <div class="col-12 col-md-6"> 
+              <h3>Enter A Tonight's Special</h3>
+              <p>
+                <form action="/add-special-item" method="POST">
+                  <div class="form-row">
+                    <div class="form-group">
+                      <!-- <label class="" for="name">Enter your dish name</label> -->
+                      <input
+                        type="text"
+                        class="form-control form-control-sm mr-1"
+                        id="name"
+                        name="name"
+                        required
+                        placeholder="Enter dish name"
+                      />
+                    </div>
+                    <br />
+                    <div class="form-group">
+                      <!-- <label class="" for="name">Enter dish details</label> -->
+                      <textarea
+                        type="text"
+                        class="form-control form-control-sm mr-1"
+                        id="details"
+                        name="details"
+                        required
+                        rows="5"
+                      >Enter dish Details 
+                      </textarea>
+                    </div>
+                    <br />
+                    <div class="form-group">
+                      <!-- <label class="" for="name">Enter your dish price</label> -->
+                      <input
+                        type="number"
+                        class="form-control form-control-sm mr-1"
+                        id="price"
+                        name="price"
+                        required
+                        placeholder="Enter dish price"
+                      />
+                    </div>
+                    <br />
+                  </div>
+                  <div class="form-row text-center">
+                    <button type="submit" class="btn btn-primary btn-sm">
+                      Add Item
+                    </button>
+                  </div>
+                </form>
+              </p><br/>
+              
+              <% if(dishes && dishes.length > 0) { %>
+                <h3>Previously Added Items</h3>
+                <p>
+                <% dishes.forEach(function(dish){ %>
+                  <strong><%= dish.name %></strong>, <%= dish.price %><br/>
+                  <%= dish.details %><br/>
+                  <a href="/delete-special-item/<%= dish._id %>" class="btn btn-sm btn-danger">Remove Item</a>
+                  <br />
+                  <br/>
+                <% }); %>	
+                </p><br/>
+              <% } %>
+              
+            </div>
+            <div class="col-12 col-md-6">
+              <img src="../images/banners/menu1.jpg" class="mt-4" alt="menu image" width="100%">
+              <img src="../images/banners/menu2.jpg" class="mt-4" alt="menu image" width="100%">
+              <img src="../images/banners/menu3.jpg" class="mt-4" alt="menu image" width="100%">
+              <img src="../images/banners/menu4.jpg" class="mt-4" alt="menu image" width="100%">
+              <img src="../images/banners/menu5.jpg" class="mt-4" alt="menu image" width="100%">
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+
+  <a href="/add-remove-menu-items">Change Today/Tonight's Special</a>
+</div>
+
+
+<%- include ('../partials/footer') %>

@@ -1,0 +1,81 @@
+<%- include ('../partials/header') %>
+
+<div class="p-3" style="min-height: 80vh;">
+  <div class="row">
+    <div class="col-md-3 col-lg-4"></div>
+    <div class="col-md-6 col-lg-4" style="margin-top: 50px; margin-bottom:50px; padding: 20px; border-radius: 25px; box-shadow: 2px 12px 12px 2px rgba(0, 0, 0, 0.219); background-color: white;">
+      <h1 class="display-5 text-center">Register Form</h1>
+      <form action="/register" method="POST">
+        <div class="form-row">
+          <div class="form-group">
+            <label class="" for="username">Enter your fullname</label>
+            <input
+              type="text"
+              class="form-control form-control-sm mr-1"
+              id="name"
+              name="name"
+              required
+              placeholder="Enter Name"
+            />
+          </div>
+          <br />
+          <div class="form-row">
+            <div class="form-group">
+              <label class="" for="username">Generate a username (length, 3 to 10)</label>
+              <input
+                type="text"
+                class="form-control form-control-sm mr-1"
+                id="username"
+                name="username"
+                required
+                placeholder="Enter Username"
+              />
+            </div>
+            <br />
+            <div class="form-row">
+              <div class="form-group">
+                <label class="" for="username">Enter your email</label>
+                <input
+                  type="email"
+                  class="form-control form-control-sm mr-1"
+                  id="email"
+                  name="email"
+                  required
+                  placeholder="Enter Eamil"
+                />
+              </div>
+          <br />
+          <label class="" for="password">Enter your password</label>
+          <div class="form-group">
+            <input
+              type="password"
+              class="form-control form-control-sm mr-1"
+              id="password"
+              name="password"
+              required
+              placeholder="Password"
+            />
+          </div>
+    
+        </div>
+        <br />
+        <p>Already have an account? <a href="/login">Login</a></p>
+        <div class="form-row text-center">
+          <a href="/features/menu"
+            type="button"
+            class="btn btn-secondary btn-sm ml-auto"
+            data-dismiss="modal"
+          >
+            Back
+          </a>
+          <button type="submit" class="btn btn-primary btn-sm ml-1">
+            Register
+          </button>
+        </div>
+      </form>
+    </div>
+    <div class="col-4"></div>
+  </div>
+</div>
+
+<%- include ('../partials/footer') %>

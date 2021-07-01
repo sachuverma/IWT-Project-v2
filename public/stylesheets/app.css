@@ -1,0 +1,33 @@
+.navbar {
+  z-index: 1;
+}
+
+.carousel-inner {
+  max-height: 90vh;
+}
+
+.carousel-item img {
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+
+.fa-cutlery {
+  font-size: 500%;
+}
+
+.decoration-none a {
+  text-decoration: none !important;
+}
+body {
+  background: #f5f5f5;
+}
+
+.footer-link {
+  color: white;
+}
+
+.footer-link:hover {
+  opacity: 0.7;
+  cursor: pointer;
+  color: white;
+}

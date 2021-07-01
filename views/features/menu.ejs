@@ -1,0 +1,99 @@
+<%- include ('../partials/header') %>
+
+
+<div class="container py-5">
+  <div class="row">
+    <div class="col-12 col-md-2 d-none d-md-block">
+      <div class="container">
+        <i class="fas fa-utensils fa-5x py-4"></i>
+      </div>
+    </div>
+    <div class="col-12 col-md-10">
+      <div class="container-fluid" id="health">
+        <h2>MENU</h2> <hr/>
+          <div class="row">
+            <div class="col-12 col-md-6">
+              <p>Available Monday-Friday from 12:00pm to 8:00pm.
+                Online ordering for pick-up is also available here.
+              </p> <br/>
+              
+              <% if(dishes && dishes.length > 0) { %>
+                <h3>Tonight's Special</h3>
+                <p>
+                <% dishes.forEach(function(dish){ %>
+                  <strong><%= dish.name %></strong>, <%= dish.price %> <br/>
+                  <%= dish.details %><br/>
+                  <br/>
+                <% }); %>	
+                </p><br/>
+              <% } %>
+              
+              <h3>Share</h3>
+              <p>
+                <strong>marinated olives</strong> from italy  10<br/>
+                <strong>‘KFC’</strong>  korean fried cauliflower, sesame, cilantro  13<br/>
+                <strong>baby back ribs</strong>  garlic sesame glaze, roasted peanut, green onion  16<br/>
+                <strong>ham croquetas</strong>  piquillo & harissa dip  13<br/>
+                <strong>charcuterie platter</strong>  serrano, chorizo, coppa, foie gras parfait, pickles, grilled sourdough  27<br/>
+                <strong>selection of local and imported cheese</strong>  choice of 3 or 5 of cheese, fruit preserve, pickle, walnut, crisps, micro sorels  18/25
+              </p> <br/>
+
+              <h3>Starters</h3>
+              <p>
+                <strong>roasted vegetables salad</strong>  kale, quinoa, zucchini, beetroot, orange vinaigrette 16<br/>
+                <strong>peanut noodle salad</strong>  carrot, cabbage, radish, chili, cilantro, peanut sauce 18<br/>
+                <strong>israeli couscous tabouleh</strong>  tomatoes, cucumber, chickpeas, red onion, mint, parsley 17<br/>
+                <strong>roasted carrot & ginger soup</strong>  coconut milk, pickles carrot   14
+              </p> <br/>
+
+              <h3>Mains</h3>
+              <p>
+                <strong>hawksworth classic burger</strong>  crispy bacon, onion ring, old cheddar, fries  25<br/>
+                <strong>chicken supreme</strong>  roasted potatoes, green beans, chicken jus 38<br/>
+                <strong>braised lamb</strong>  grilled broccolini, sauteed mushroom, rosemary jus 42<br/>
+                <strong>miso glazed cod bowl</strong>  brown rice, avocado, tomatoes, green bean, fermented carrots, charred lime 32
+              </p> <br/>
+
+              <h3>Sides</h3>
+              <p>
+                <strong> mixed salad</strong>  13<br/>
+                <strong>grilled broccolini</strong>  chili and garlic  9<br/>
+                <strong>mushrooms</strong>  sautéed wild & domestic mushrooms  12<br/>
+                <strong>truffle fries</strong>  18
+              </p> <br/>
+
+              <h3>Family-Style Options</h3>
+              <p>
+                <i>serves 4 guests</i><br/>
+                <strong>peanut noodle salad</strong>  carrot, cabbage, radish, chili, cilantro, peanut sauce 45<br/>
+                <strong>roasted vegetables salad</strong>  kale, quinoa, zucchini, beetroot, orange vinaigrette 40<br/>
+                <strong>israeli couscous tabouleh</strong>  tomatoes, cucumber, chickpeas, red onion, mint, parsley 42<br/>
+                <strong>whole roasted chicken</strong>  grilled broccolini, sauteed mushroom 88<br/>
+                <strong>grilled ribeye</strong>  two 15oz ribeye, roasted potatoes, green beans, compound butter 110<br/>
+                <strong>glazed lingcod</strong>  brown rice, avocado, tomatoes, green bean, fermented carrots, charred lime 75
+              </p> <br/>
+
+              <h3>Desserts</h3>
+              <p>
+                <strong>caramel pot de crème</strong>  cardamom, vanilla, crème fraîche, salt  13<br/>
+                <strong>baba au rhum</strong>  compressed pineapple, coconut ganache 13<br/>
+                <strong>hazelnut praline</strong>  milk chocolate, passion  13
+              </p> <br/>
+            </div>
+            <div class="col-12 col-md-6">
+              <img src="../images/banners/menu1.jpg" class="mt-4" alt="menu image" width="100%">
+              <img src="../images/banners/menu2.jpg" class="mt-4" alt="menu image" width="100%">
+              <img src="../images/banners/menu3.jpg" class="mt-4" alt="menu image" width="100%">
+              <img src="../images/banners/menu4.jpg" class="mt-4" alt="menu image" width="100%">
+              <img src="../images/banners/menu5.jpg" class="mt-4" alt="menu image" width="100%">
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+
+  <a href="/add-remove-menu-items">Change Today/Tonight's Special</a>
+</div>
+
+
+<%- include ('../partials/footer') %>
