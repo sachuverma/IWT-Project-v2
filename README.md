@@ -7,7 +7,7 @@ It has **HTML Form** for making reservations, a **payments** checkout page for r
 
 It also has functionality in which, **registered users** of restaurant can edit today’s special items list, it uses user **authentication** and stores all the items on **MongoDB**   
 
-Deployed here - https://iwt-practical.herokuapp.com/
+Deployed here - https://iwt-practical.herokuapp.com/           
 Features:
 - Landing Page (with image slider)
 - Reservation Form
